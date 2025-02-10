@@ -1,0 +1,113 @@
+@use '../_mixins.scss';
+
+:root {
+  --content-block-padding: 48px;
+  --content-inline-padding: 60px;
+  --content-max-width: 1240px;
+
+  @media (max-width: 580px) {
+    --content-block-padding: 40px;
+    --content-inline-padding: 20px;
+  }
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--neutral-color-1);
+}
+
+// Auth page
+.auth-form-container {
+  display: grid;
+  gap: var(--spacing-8);
+  width: 100%;
+  text-align: center;
+  color: var(--neutral-color-1);
+}
+
+.auth-form {
+  @include mixins.box;
+  gap: var(--spacing-10);
+  margin: auto;
+  max-width: 550px;
+  width: 100%;
+  padding: var(--spacing-10);
+  text-align: left;
+  color: var(--primary-color-4);
+}
+
+.auth-form-header {
+  display: grid;
+  gap: var(--spacing-6);
+}
+
+.auth-form-fields-container {
+  display: grid;
+  gap: var(--spacing-8);
+}
+
+.auth-form-input {
+  margin-bottom: var(--spacing-6);
+}
+
+.auth-form-buttons-container {
+  text-align: right;
+}
+
+
+// Main Page
+.section-spacing {
+  display: grid;
+  gap: var(--spacing-8);
+  align-content: start;
+}
+
+.root-page-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: var(--spacing-4);
+
+  @media (max-width: 400px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.table-options-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.double-column-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-8);
+  align-items: flex-start;
+}
+
+.input-with-button-container {
+  display: flex;
+  gap: var(--spacing-4);
+  align-items: end;
+
+  @media (max-width: 400px) {
+    display: grid;
+  }
+
+  &.center {
+    align-items: center;
+  }
+}
+
+.table-cell-icon {
+  vertical-align: sub;
+  margin-right: var(--spacing-5);
+  color: var(--primary-color-4);
+}

@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "overrides": {
+    "vue": "latest"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "HOST=0.0.0.0 nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@regle/core": "^0.7.6",
+    "@regle/nuxt": "^0.7.6",
+    "@regle/rules": "^0.7.6",
+    "nuxt": "^3.15.2"
+  },
+  "devDependencies": {
+    "sass": "^1.83.4",
+    "sass-loader": "^16.0.4"
+  }
+}

@@ -1,0 +1,58 @@
+// TipTap content style
+.tiptap-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.tiptap-underline {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+}
+
+.tiptap-italic {
+  font-style: italic;
+}
+
+.tiptap-heading-1 {
+  font-size: 2em;
+}
+
+.tiptap-heading-2 {
+  font-size: 1.5em;
+}
+
+.tiptap-heading-3 {
+  font-size: 1.25em;
+}
+
+.tiptap-heading-4 {
+  font-size: 1.125em;
+}
+
+.tiptap-link {
+  color: var(--primary-color-4);
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: var(--transition-duration-1);
+
+  @media (hover: hover) {
+    &:hover:not([aria-disabled="true"]) {
+      text-decoration: underline 1px;
+      color: var(--primary-color-5);
+    }
+  }
+
+  &:active:not([aria-disabled="true"]) {
+    text-decoration: underline 1px;
+    color: var(--primary-color-6);
+  }
+
+  &:focus-visible:not([aria-disabled="true"]) {
+    border-radius: var(--border-radius-1);
+    outline: var(--focus-outline);
+  }
+
+  &[aria-disabled="true"] {
+    opacity: var(--disabled-opacity);
+    cursor: not-allowed;
+  }
+}

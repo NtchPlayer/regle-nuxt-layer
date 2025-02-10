@@ -1,0 +1,11 @@
+:root {
+  --transition-duration-1: .2s;
+  --transition-duration-2: .4s;
+  --transition-duration-3: .6s;
+
+  @media (prefers-reduced-motion: reduce) {
+    --transition-duration-1: 0s;
+    --transition-duration-2: 0s;
+    --transition-duration-3: 0s;
+  }
+}

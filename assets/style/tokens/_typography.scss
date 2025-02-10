@@ -1,0 +1,49 @@
+@use '../_mixins.scss';
+
+body {
+  text-rendering: optimizeLegibility;
+  font-family: var(--body-font-family);
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: 'tnum', 'lnum';
+  font-weight: var(--font-weight-medium);
+  font-synthesis: none;
+  direction: ltr;
+  line-height: 1.375;
+  color: var(--body-text-color);
+}
+
+.heading-1,
+.heading-2,
+.heading-3,
+.heading-4 {
+  color: var(--heading-color);
+}
+
+.heading-1 {
+  font-weight: var(--font-weight-bold);
+}
+
+.heading-2,
+.heading-3,
+.heading-4 {
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.heading-1 {
+  font-size: mixins.responsive-font-size(1.25em, 1.5em);
+}
+
+.heading-2 {
+  font-size: mixins.responsive-font-size(1.125em, 1.25em);
+}
+
+.heading-3 {
+  font-size: mixins.responsive-font-size(1em, 1.125em);
+}
+
+.modal-title {
+  margin: var(--text-spacing-4) 0;
+  font-weight: var(--font-weight-semi-bold);
+  font-size: mixins.responsive-font-size(1.125em, 1.375em);
+  color: var(--primary-color-5);
+}
