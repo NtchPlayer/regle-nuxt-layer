@@ -1,9 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { fileURLToPath } from 'url'
+import { dirname, join } from 'path'
+
+const currentDir = dirname(fileURLToPath(import.meta.url))
+
 export default defineNuxtConfig({
-  modules: ['@regle/nuxt'],
   compatibilityDate: '2024-04-03',
   devtools: { enabled: false },
-  css: ['./assets/style/styles.scss'],
+  css: [join(currentDir, './assets/style/styles.scss')],
   vite: {
     css: {
       preprocessorOptions: {
