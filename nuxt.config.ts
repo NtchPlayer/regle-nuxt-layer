@@ -12,9 +12,9 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@use "./assets/style/_mixins.scss" as *;',
-        },
-      },
-    },
+          additionalData: `@use "${join(currentDir, './assets/style/_mixins.scss').replaceAll('\\', '/')}" as *;`
+        }
+      }
+    }
   },
 });
